@@ -7,6 +7,7 @@
 	}else{
 		echo CHtml::link("Ledenlijst", array("leden/index"));
 		echo CHtml::link("Ledentypes", array("lidtype/index"));
+		echo CHtml::link("Wachtwoord wijzigen", array("admin/update"));
 		echo CHtml::link("Afmelden", array("login/logout"));
 ?>
 <hr/>
