@@ -22,7 +22,7 @@ class AdminController extends CController
 		if(isset($_POST['AdminModel'])){
 			$model->attributes = $_POST['AdminModel'];
 			
-			$this->render("update", array("success" => $model->save()));
+			$this->render("update", array("model" => $model, "success" => $model->save()));
 		}else{
 			$this->render("update", array("model" => $model));
 		}
