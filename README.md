@@ -1,3 +1,1 @@
-De GitHub staat op peck94/LVSVGent.
-Het paswoord voor commit is hetzelfde als voor mijn Facebook,
-het paswoord voor GitHub is hetzelfde als voor brol.
+Deze files dienen voor het online databasesysteem van het LVSV Gent.
