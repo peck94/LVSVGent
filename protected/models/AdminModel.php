@@ -3,6 +3,13 @@ class AdminModel extends CFormModel
 {
 	public $name, $current_password, $new_password, $confirm_password;
 	
+	public function rules()
+	{
+		return array(
+			array("current_password, new_password, confirm_password", "required"),
+		);
+	}
+	
 	public function attributeLabels()
 	{
 		return array(
