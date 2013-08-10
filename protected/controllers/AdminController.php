@@ -3,7 +3,9 @@ class AdminController extends CController
 {
 	public function actionUpdate()
 	{
-		$this->render("update");
+		$model = new User;
+
+		$this->render("update", array("model" => $model));
 	}
 }
 ?>
