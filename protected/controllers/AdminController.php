@@ -19,8 +19,13 @@ class AdminController extends CController
 	public function actionUpdate()
 	{
 		$model = new AdminModel;
-
-		$this->render("update", array("model" => $model));
+		if(isset($_POST['AdminModel'])){
+			$model->attributes = $_POST['AdminModel'];
+			
+			$this->render("update", array("success" => $model->save()));
+		}else{
+			$this->render("update", array("model" => $model));
+		}
 	}
 }
 ?>
