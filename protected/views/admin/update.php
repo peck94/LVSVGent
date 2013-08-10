@@ -1,5 +1,13 @@
 <h2>Wachtwoord wijzigen</h2>
 
+<?php
+	if(isset($success) && $success){
+?>
+Het wachtwoord is succesvol aangepast.
+<?php
+	}
+?>
+
 <?php echo CHtml::beginForm(); ?>
 
 <div class="form">
