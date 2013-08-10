@@ -50,11 +50,16 @@ h2{
 }
 
 .row{
-	margin-left: 50%;
+	margin-left: 30%;
+	margin-bottom: 5px;
 }
 
 .row, .row input, .row textarea, .row select{
 	display: block;
+}
+
+.row input{
+	font-size: 12pt;
 }
 
 .errorSummary{
