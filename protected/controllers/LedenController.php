@@ -75,5 +75,10 @@ class LedenController extends CController
 		Lid::model()->findByPk($id)->delete();
 		$this->redirect(array("leden/index"));
 	}
+	
+	public function actionPrint()
+	{
+		$this->render("print");
+	}
 }
 ?>
