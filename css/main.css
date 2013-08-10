@@ -48,3 +48,13 @@ h2{
 .row, .row input, .row textarea, .row select{
 	display: block;
 }
+
+.errorSummary{
+	border: 1px solid red;
+	color: red;
+}
+
+.error{
+	background-color: red;
+	color: white;
+}
