@@ -17,6 +17,14 @@
 
 #menu a {
 	display: block;
+	margin: 5px;
+	text-decoration: underline;
+}
+
+#menu a:hover {
+	background-color: blue;
+	color: white;
+	text-decoration: none;
 }
 
 #content {
