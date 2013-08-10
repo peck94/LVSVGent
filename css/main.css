@@ -1,0 +1,50 @@
+* {
+	font-family: sans-serif;
+}
+
+#header {
+	font-size: 20pt;
+	color: white;
+	background-color: blue;
+}
+
+#menu {
+	border-right: 1px solid black;
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+#menu a {
+	display: block;
+}
+
+#content {
+	margin-left: 21%;
+}
+
+#footer {
+	font-size: 10pt;
+	border-top: 1px solid black;
+	clear: both;
+}
+
+a{
+	color: blue;
+}
+
+h2{
+	color: blue;
+}
+
+.items td{
+	text-align: center;
+}
+
+.row{
+	margin-left: 50%;
+}
+
+.row, .row input, .row textarea, .row select{
+	display: block;
+}
