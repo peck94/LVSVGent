@@ -7,8 +7,8 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'leden-grid',
-	'dataProvider'=>Lid::model()->search(),
-	'filter'=>Lid::model(),
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'columns'=>array(
 		'aangever',
 		'voornaam',
