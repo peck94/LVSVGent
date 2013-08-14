@@ -17,5 +17,10 @@ class User extends CActiveRecord
     {
     	return "id";
     }
+    
+    public static function encrypt($txt)
+    {
+    	return md5($txt);
+    }
 }
 ?>
