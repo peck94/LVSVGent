@@ -15,21 +15,27 @@ class AdminController extends CController
             array('deny'),
         );
     }
-
-	public function actionUpdate()
-	{
-		$model = new AdminModel;
-		if(isset($_POST['AdminModel'])){
-			$model->attributes = $_POST['AdminModel'];
-			$status = $model->save();
-			if($status){
-				$model = new AdminModel;
-			}
-			
-			$this->render("update", array("model" => $model, "success" => $status));
-		}else{
-			$this->render("update", array("model" => $model));
-		}
-	}
+    
+    public function actionIndex()
+    {
+    	$model = new AdminModel;
+    	$model->load();
+    	$this->render("index", array("model" => $model));
+    }
+    
+    public function actionUpdate()
+    {
+    	$model = new AdminModel;
+    	$model->load();
+    	if(isset($_POST['AdminModel'])){
+    		$model->attributes = $_POST['AdminModel'];
+    		if($model->save()){
+    			$this->redirect(array("admin/index"));
+    			return;
+    		}
+    	}
+    
+    	$this->render("update", array("model" => $model));
+    }
 }
 ?>
