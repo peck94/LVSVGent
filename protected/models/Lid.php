@@ -51,5 +51,13 @@ class Lid extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public static function statistics()
+	{
+		$stats = new LedenStats;
+		$stats->load();
+	
+		return $stats;
+	}
 }
 ?>
