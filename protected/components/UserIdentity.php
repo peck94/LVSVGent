@@ -13,7 +13,7 @@ class UserIdentity extends CUserIdentity
 		// controleer record
 		if($this->record === null){
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
-		}else if($this->record->password !== md5($this->password)){
+		}else if($this->record->password !== User::encrypt($this->password)){
 			$this->errorCode = self::ERROR_PASSWORD_INVALID;
 		}else{
 			$this->_id = $this->record->id;
