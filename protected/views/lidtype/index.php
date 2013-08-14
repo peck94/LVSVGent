@@ -4,8 +4,8 @@
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'type-grid',
-	'dataProvider'=>LidType::model()->search(),
-	'filter'=>LidType::model(),
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
 	'columns'=>array(
 		'titel',
 		'kost',
