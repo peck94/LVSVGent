@@ -22,8 +22,11 @@ class Lid extends CActiveRecord
     public function rules()
     {
     	return array(
-    		array("voornaam, achternaam, aangever, email, type, id", "required"),
+    		array("voornaam, achternaam, aangever, email, type, id, studierichting, betaald", "required"),
+    		array("adres, postcode, stad, stickers, opmerkingen", "safe"),
+    		array("email", "unique"),
     		array("betaald", "boolean"),
+    		array('voornaam, achternaam, aangever, email, adres, postcode, stad, studierichting, jaar, type', 'safe', 'on'=>'search'),
     	);
     }
     
@@ -40,11 +43,11 @@ class Lid extends CActiveRecord
 		$criteria->compare('stad',$this->stad,true);
 		$criteria->compare('studierichting',$this->studierichting,true);
 		$criteria->compare('opmerkingen',$this->opmerkingen,true);
-		$criteria->compare('jaar',$this->jaar);
+		$criteria->compare('jaar',$this->jaar,true);
 		$criteria->compare('betaald',$this->betaald);
 		$criteria->compare('type',$this->type);
 
-		return new CActiveDataProvider($this, array(
+		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
 		));
 	}
