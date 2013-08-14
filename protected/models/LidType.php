@@ -21,7 +21,8 @@ class LidType extends CActiveRecord
     public function rules()
     {
     	return array(
-    		array("titel, kost", "required")
+    		array("titel, kost", "required"),
+    		array("titel, kost", "safe", "on" => "search"),
     	);
     }
 
