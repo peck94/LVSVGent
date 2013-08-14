@@ -84,7 +84,29 @@ class LedenController extends CController
 	
 	public function actionPrint()
 	{
-		$this->render("print");
+		$leden = Lid::model()->findAll();
+		$count = 0;
+		$limit = 5;
+
+		echo "<table style='width: 100%'><tr>";
+		foreach($leden as $lid){
+			echo "<td>";
+			echo $lid->voornaam . " " . $lid->achternaam . "<br/>";
+			echo $lid->adres . "<br/>";
+			echo $lid->postcode . " " . $lid->stad . "<br/>";
+			echo "</td>";
+			
+			$count++;
+			if($count % $limit == 0){
+				echo "</tr><tr>";
+			}
+		}
+		echo "</tr></table>";
+	}
+	
+	public function actionStats()
+	{
+		$this->render("stats");
 	}
 }
 ?>
