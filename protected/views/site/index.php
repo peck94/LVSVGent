@@ -4,6 +4,8 @@
 		Gebruik het menu hiernaast om de site te navigeren.
 	</p>
 	<p>
-		Voor vragen of problemen, mail <a href="mailto:weblvsvgent@gmail.com">de webmaster</a>.
+		Indien u uw gegevens kwijt bent, mail <a href="mailto:weblvsvgent@gmail.com">de webmaster</a>.
+		<br/>
+		Ernstigere problemen kunt u melden bij <a href="mailto:peckjonathan@gmail.com">Jonathan Peck</a>.
 	</p>
 </blockquote>
