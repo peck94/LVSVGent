@@ -22,7 +22,7 @@ class Lid extends CActiveRecord
     public function rules()
     {
     	return array(
-    		array("voornaam, achternaam, aangever, email, adres, postcode, stad, studierichting, type, id", "required"),
+    		array("voornaam, achternaam, aangever, email, type, id", "required"),
     		array("betaald", "boolean"),
     	);
     }
