@@ -2,7 +2,8 @@
 
 <p>
 	<?php echo CHtml::link("Nieuw lid", array("leden/new")); ?> |
-	<?php echo CHtml::link("Stickers afdrukken", array("leden/print")); ?>
+	<?php echo CHtml::link("Stickers afdrukken", array("leden/print"), array("target" => "_blank")); ?> |
+	<?php echo CHtml::link("Statistieken", array("leden/stats")); ?>
 </p>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
