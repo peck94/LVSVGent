@@ -18,7 +18,13 @@ class LidTypeController extends CController
 
 	public function actionIndex()
 	{
-		$this->render("index");
+		$model = new LidType("search");
+		$model->unsetAttributes();
+		if(isset($_GET['LidType'])){
+			$model->attributes = $_GET['LidType'];
+		}
+	
+		$this->render("index", array("model" => $model));
 	}
 
 	public function actionView()
