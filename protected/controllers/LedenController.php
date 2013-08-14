@@ -18,7 +18,13 @@ class LedenController extends CController
 
 	public function actionIndex()
 	{
-		$this->render("index", array("dataProvider" => new CActiveDataProvider("Lid")));
+		$model = new Lid("search");
+		$model->unsetAttributes();
+		if(isset($_GET['Lid'])){
+			$model->attributes = $_GET['Lid'];
+		}
+	
+		$this->render("index", array("model" => $model));
 	}
 	
 	public function actionView()
