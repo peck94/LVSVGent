@@ -26,7 +26,7 @@
 		),
 		array(
 			'name' => 'betaald',
-			'value' => '($data->betaald) ? "Ja" : "Nee"'
+			'value' => '($data->betaald) ? "<img src=\'<?php echo Yii::app()->baseUrl; ?>/ok.png\'/>" : "<img src=\'<?php echo Yii::app()->baseUrl; ?>/not.png\'/>"'
 		),
 		array(
 			'class'=>'CButtonColumn',
